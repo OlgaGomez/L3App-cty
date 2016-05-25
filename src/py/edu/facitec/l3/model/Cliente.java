@@ -1,33 +1,43 @@
 package py.edu.facitec.l3.model;
+/**
+ * 
+ * @author OlgaGomez
+ *esta clase es una representacion de la entidad cliente
+ */
 
 public class Cliente {
+	//atributos
 	private int codigo;
 	private String nombre;
 	private String apellido;
-	private String direccion;
-	private int cedulanumero;
+	private String direcion;
+	private int cedula_numero;
 	private boolean estado;
 	
-	
+	//constructores
+	//por defecto
 	public Cliente() {
 		super();
 		this.codigo=0;
 		this.nombre="";
 		this.apellido="";
-		this.direccion="";
+		this.direcion="";
+		this.cedula_numero=0;
 		this.estado=false;
-}
+	}
 	
-	public Cliente(int codigo, String nombre, String apellido, String direccion, 
+	//por parametro
+	public Cliente(int codigo, String nombre, String apellido, String direcion, int cedula_numero, 
 			boolean estado) {
 		super();
 		this.codigo = codigo;
 		this.nombre = nombre;
 		this.apellido = apellido;
-		this.direccion = direccion;
+		this.direcion = direcion;
+		this.cedula_numero= cedula_numero;
 		this.estado = estado;
-		
 	}
+	//metodos
 
 	public int getCodigo() {
 		return codigo;
@@ -53,20 +63,20 @@ public class Cliente {
 		this.apellido = apellido;
 	}
 
-	public String getDireccion() {
-		return direccion;
+	public String getDirecion() {
+		return direcion;
 	}
 
-	public void setDireccion(String direccion) {
-		this.direccion = direccion;
+	public void setDirecion(String direcion) {
+		this.direcion = direcion;
 	}
 
-	public int getCedulanumero() {
-		return cedulanumero;
+	public int getCedula_numero() {
+		return cedula_numero;
 	}
 
-	public void setCedulanumero(int cedulanumero) {
-		this.cedulanumero = cedulanumero;
+	public void setCedula_numero(int cedula_numero) {
+		this.cedula_numero = cedula_numero;
 	}
 
 	public boolean isEstado() {
@@ -76,6 +86,7 @@ public class Cliente {
 	public void setEstado(boolean estado) {
 		this.estado = estado;
 	}
-	
-	
+
+
 }
+
